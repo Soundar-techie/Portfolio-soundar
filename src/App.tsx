@@ -227,7 +227,7 @@ function App() {
                 className: "bg-[#FFA116] hover:bg-[#FF9900]"
               },
               {
-                href: "mailto:your.email@example.com",
+                href: "mailto:vksoundar2020@gmail.com",
                 icon: Mail,
                 text: "Contact Me",
                 className: "bg-blue-600 hover:bg-blue-700"
