@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, ExternalLink, ArrowUpRight, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { style } from 'framer-motion/client';
 
 function App() {
   const fadeIn = {
@@ -31,9 +32,15 @@ function App() {
             className="flex items-center gap-8 mb-8"
             variants={fadeIn}
           >
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-500 text-2xl font-semibold">
-              SK
-            </div>
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+  <img
+    src="/src/profilePhoto/soundar-portfolio.jpg" 
+    alt="VKS"
+    className="h-35 w-35 rounded-[50%] object-cover hover:scale-105 transition-transform"
+  />
+
+</div>
+
             <div>
               <motion.h1 
                 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent"
@@ -90,6 +97,21 @@ function App() {
               <div className="flex items-center gap-4">
                 <a 
                   href="https://communion-dev.netlify.app/"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project <ExternalLink className="ml-1 w-4 h-4" />
+                </a>
+              </div>
+
+              <h3 className="text-xl font-semibold mb-3 mt-5">Events Calendar</h3>
+              <p className="text-gray-600 mb-4">
+                A modern social platform built with React, featuring a responsive UI, real-time updates, and seamless user interactions.
+              </p>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://reminder-calendar.netlify.app/"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -227,7 +249,7 @@ function App() {
                 className: "bg-[#FFA116] hover:bg-[#FF9900]"
               },
               {
-                href: "mailto:vksoundar2020@gmail.com",
+                href: "vksoundar2020@gmail.com",
                 icon: Mail,
                 text: "Contact Me",
                 className: "bg-blue-600 hover:bg-blue-700"
