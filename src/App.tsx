@@ -218,6 +218,64 @@ function App() {
           </motion.div>
         </motion.section>
 
+  {/* Education Section */}
+<motion.section 
+  className="mb-20"
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true }}
+  variants={staggerContainer}
+>
+  <motion.h2 
+    className="text-3xl font-semibold text-gray-900 mb-8"
+    variants={fadeIn}
+  >
+    🎓 Education
+  </motion.h2>
+  <motion.div 
+    className="grid grid-cols-1 md:grid-cols-2 gap-6"
+    variants={fadeIn}
+  >
+    <div className="opacity-100">
+    {[
+      {
+        degree: "Bachelor of Computer Application",
+        institution: "KSR College of Arts and Science",
+        location: "Tiruchengode, Tamil Nadu",
+        duration: "2022 – 2025",
+        score: "7.6 CGPA",
+      },
+      {
+        degree: "Higher Secondary (HSC)",
+        institution: "Govt Higher Secondary School",
+        location: "Namakkal, Tamil Nadu",
+        duration: "2021 – 2022",
+        score: "75%",
+      },
+      {
+        degree: "SSLC (10th)",
+        institution: "Govt Higher Secondary School",
+        location: "Namakkal, Tamil Nadu",
+        duration: "2019 – 2020",
+        score: "85%",
+      },
+    ].map((edu, index) => (
+      <motion.div 
+        key={index}
+        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+        whileHover={{ scale: 1.02 }}
+        variants={fadeIn}
+      >
+        <h3 className="text-xl font-semibold text-gray-800">{edu.degree}</h3>
+        <p className="text-gray-600">{edu.institution}, {edu.location}</p>
+        <p className="text-sm text-gray-500 mt-1">{edu.duration} • <span className="font-medium">{edu.score}</span></p>
+      </motion.div>
+    ))}
+    </div>
+  </motion.div>
+</motion.section>
+
+
         {/* Links Section */}
         <motion.section
           initial="initial"
