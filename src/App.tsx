@@ -1,7 +1,9 @@
 import React from 'react';
 import { Github, ExternalLink, ArrowUpRight, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { style } from 'framer-motion/client';
+// import { style } from 'framer-motion/client';
+import profileImg from './assets/soundar-portfolio.jpg';
+
 
 function App() {
   const fadeIn = {
@@ -22,33 +24,34 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
       <header className="bg-white shadow-sm">
-        <motion.div 
+        <motion.div
           className="max-w-6xl mx-auto px-4 py-20"
           initial="initial"
           animate="animate"
           variants={staggerContainer}
         >
-          <motion.div 
+          <motion.div
             className="flex items-center gap-8 mb-8"
             variants={fadeIn}
           >
             <div className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-  <img
-    src="/src/profilePhoto/soundar-portfolio.jpg" 
-    alt="VKS"
-    className="h-35 w-35 rounded-[50%] object-cover hover:scale-105 transition-transform"
-  />
+              <img
+                src={profileImg}
+                alt="VKS"
+                className="h-35 w-35 rounded-[50%] object-cover hover:scale-105 transition-transform"
+              />
 
-</div>
+
+            </div>
 
             <div>
-              <motion.h1 
+              <motion.h1
                 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent"
                 variants={fadeIn}
               >
                 Soundar K
               </motion.h1>
-              <motion.h2 
+              <motion.h2
                 className="text-2xl text-gray-600 mt-2"
                 variants={fadeIn}
               >
@@ -56,7 +59,7 @@ function App() {
               </motion.h2>
             </div>
           </motion.div>
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-600 max-w-2xl"
             variants={fadeIn}
           >
@@ -68,24 +71,24 @@ function App() {
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-16">
         {/* Projects Section */}
-        <motion.section 
+        <motion.section
           className="mb-20"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-semibold text-gray-900 mb-8"
             variants={fadeIn}
           >
             Featured Projects
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
             variants={fadeIn}
           >
-            <motion.div 
+            <motion.div
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
               whileHover={{ scale: 1.02 }}
               variants={fadeIn}
@@ -95,7 +98,7 @@ function App() {
                 A modern social platform built with React, featuring a responsive UI, real-time updates, and seamless user interactions.
               </p>
               <div className="flex items-center gap-4">
-                <a 
+                <a
                   href="https://communion-dev.netlify.app/"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
                   target="_blank"
@@ -110,7 +113,7 @@ function App() {
                 A modern social platform built with React, featuring a responsive UI, real-time updates, and seamless user interactions.
               </p>
               <div className="flex items-center gap-4">
-                <a 
+                <a
                   href="https://reminder-calendar.netlify.app/"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
                   target="_blank"
@@ -124,20 +127,20 @@ function App() {
         </motion.section>
 
         {/* Skills Section */}
-        <motion.section 
+        <motion.section
           className="mb-20"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-semibold text-gray-900 mb-8"
             variants={fadeIn}
           >
             Technical Skills
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
             variants={fadeIn}
           >
@@ -155,7 +158,7 @@ function App() {
                 skills: ["Vite", "Redux Toolkit", "React Query", "Jest & React Testing Library"]
               }
             ].map((category, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
@@ -173,20 +176,20 @@ function App() {
         </motion.section>
 
         {/* Experience Section */}
-        <motion.section 
+        <motion.section
           className="mb-20"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-semibold text-gray-900 mb-8"
             variants={fadeIn}
           >
             Frontend Experience
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="bg-white p-6 rounded-xl shadow-sm"
             variants={fadeIn}
           >
@@ -205,7 +208,7 @@ function App() {
                   description: "Skilled in translating design mockups into pixel-perfect, responsive interfaces with modern CSS techniques."
                 }
               ].map((exp, index) => (
-                <motion.li 
+                <motion.li
                   key={index}
                   className="hover:bg-gray-50 p-4 rounded-lg transition-colors"
                   whileHover={{ x: 10 }}
@@ -218,62 +221,62 @@ function App() {
           </motion.div>
         </motion.section>
 
-  {/* Education Section */}
-<motion.section 
-  className="mb-20"
-  initial="initial"
-  whileInView="animate"
-  viewport={{ once: true }}
-  variants={staggerContainer}
->
-  <motion.h2 
-    className="text-3xl font-semibold text-gray-900 mb-8"
-    variants={fadeIn}
-  >
-    🎓 Education
-  </motion.h2>
-  <motion.div 
-    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-    variants={fadeIn}
-  >
-    <div className="opacity-100">
-    {[
-      {
-        degree: "Bachelor of Computer Application",
-        institution: "KSR College of Arts and Science",
-        location: "Tiruchengode, Tamil Nadu",
-        duration: "2022 – 2025",
-        score: "7.6 CGPA",
-      },
-      {
-        degree: "Higher Secondary (HSC)",
-        institution: "Govt Higher Secondary School",
-        location: "Namakkal, Tamil Nadu",
-        duration: "2021 – 2022",
-        score: "75%",
-      },
-      {
-        degree: "SSLC (10th)",
-        institution: "Govt Higher Secondary School",
-        location: "Namakkal, Tamil Nadu",
-        duration: "2019 – 2020",
-        score: "85%",
-      },
-    ].map((edu, index) => (
-      <motion.div 
-        key={index}
-        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-        whileHover={{ scale: 1.02 }}
-        variants={fadeIn}
-      >
-        <h3 className="text-xl font-semibold text-gray-800">{edu.degree}</h3>
-        <p className="text-gray-600">{edu.institution}, {edu.location}</p>
-        <p className="text-sm text-gray-500 mt-1">{edu.duration} • <span className="font-medium">{edu.score}</span></p>
-      </motion.div>
-    ))}
-    </div>
-  </motion.div>
-</motion.section>
+        {/* Education Section */}
+        <motion.section
+          className="mb-20"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.h2
+            className="text-3xl font-semibold text-gray-900 mb-8"
+            variants={fadeIn}
+          >
+            🎓 Education
+          </motion.h2>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            variants={fadeIn}
+          >
+            <div className="opacity-100">
+              {[
+                {
+                  degree: "Bachelor of Computer Application",
+                  institution: "KSR College of Arts and Science",
+                  location: "Tiruchengode, Tamil Nadu",
+                  duration: "2022 – 2025",
+                  score: "7.6 CGPA",
+                },
+                {
+                  degree: "Higher Secondary (HSC)",
+                  institution: "Govt Higher Secondary School",
+                  location: "Namakkal, Tamil Nadu",
+                  duration: "2021 – 2022",
+                  score: "75%",
+                },
+                {
+                  degree: "SSLC (10th)",
+                  institution: "Govt Higher Secondary School",
+                  location: "Namakkal, Tamil Nadu",
+                  duration: "2019 – 2020",
+                  score: "85%",
+                },
+              ].map((edu, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  whileHover={{ scale: 1.02 }}
+                  variants={fadeIn}
+                >
+                  <h3 className="text-xl font-semibold text-gray-800">{edu.degree}</h3>
+                  <p className="text-gray-600">{edu.institution}, {edu.location}</p>
+                  <p className="text-sm text-gray-500 mt-1">{edu.duration} • <span className="font-medium">{edu.score}</span></p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </motion.section>
 
 
         {/* Links Section */}
@@ -283,13 +286,13 @@ function App() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-semibold text-gray-900 mb-8"
             variants={fadeIn}
           >
             Connect
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="flex flex-wrap gap-6"
             variants={fadeIn}
           >
@@ -307,24 +310,30 @@ function App() {
                 className: "bg-[#FFA116] hover:bg-[#FF9900]"
               },
               {
-                href: "vksoundar2020@gmail.com",
+                href: "mailto:vksoundar2020@gmail.com?subject=Hello%20Soundar&body=Hi%20Soundar%2C%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect.",
                 icon: Mail,
                 text: "Contact Me",
-                className: "bg-blue-600 hover:bg-blue-700"
+                className: "bg-blue-600 hover:bg-blue-700",
+                external: false
               }
+
+
             ].map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
                 className={`inline-flex items-center px-4 py-2 text-white rounded-lg transition-all duration-300 transform hover:-translate-y-1 ${link.className}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(link.external !== false && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
                 whileHover={{ scale: 1.05 }}
                 variants={fadeIn}
               >
                 <link.icon className="w-5 h-5 mr-2" />
                 {link.text}
               </motion.a>
+
             ))}
           </motion.div>
         </motion.section>
