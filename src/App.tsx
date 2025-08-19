@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink, ArrowUpRight, Mail } from 'lucide-react';
+import { Github, ExternalLink, ArrowUpRight, Mail, Phone, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 // import { style } from 'framer-motion/client';
 import profileImg from './assets/soundar-portfolio.jpg';
@@ -290,7 +290,7 @@ function App() {
             className="text-3xl font-semibold text-gray-900 mb-8"
             variants={fadeIn}
           >
-            Connect
+            Connect Me
           </motion.h2>
           <motion.div
             className="flex flex-wrap gap-6"
@@ -310,9 +310,15 @@ function App() {
                 className: "bg-[#FFA116] hover:bg-[#FF9900]"
               },
               {
-                href: "mailto:vksoundar2020@gmail.com?subject=Hello%20Soundar&body=Hi%20Soundar%2C%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect.",
-                icon: Mail,
-                text: "Contact Me",
+                href: "https://www.linkedin.com/in/soundar-k-216b13270",
+                icon: Linkedin,
+                text: "LinkeIn",
+                className: "bg-blue-600 hover:bg-blue-700"
+              },
+              {
+                href: "+91 9361513600",
+                icon: Phone,
+                text: "+91 9361513600",
                 className: "bg-blue-600 hover:bg-blue-700",
                 external: false
               }
