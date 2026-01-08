@@ -1,360 +1,163 @@
-import React from 'react';
-import { Github, ExternalLink, ArrowUpRight, Mail, Phone, Linkedin } from 'lucide-react';
-import { motion } from 'framer-motion';
-// import { style } from 'framer-motion/client';
-import profileImg from './assets/soundar-portfolio.jpg';
-
+import React, { useState } from "react";
+import { Github, ExternalLink, ArrowUpRight, Phone, Mail, Linkedin } from "lucide-react";
+import { Modal, Button } from "react-bootstrap"; // Import React-Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
+import profileImg from "./assets/soundar-portfolio.jpg";
 
 function App() {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  const [showModal, setShowModal] = useState(false);
 
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
+  const handleOpen = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      {/* Hero Section */}
-      <header className="bg-white shadow-sm">
-        <motion.div
-          className="max-w-6xl mx-auto px-4 py-20"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          <motion.div
-            className="flex items-center gap-8 mb-8"
-            variants={fadeIn}
-          >
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Animated Dark Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-gray-900 animate-gradient-bg"></div>
+
+      {/* Main content wrapper */}
+      <div className="relative z-10">
+
+        {/* Hero Section */}
+        <header className="py-20">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+            {/* Profile Image */}
+            <div
+              className="group w-36 h-36 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg cursor-pointer transition-shadow duration-300 hover:shadow-xl"
+              onClick={handleOpen}
+            >
               <img
                 src={profileImg}
-                alt="VKS"
-                className="h-35 w-35 rounded-[50%] object-cover hover:scale-105 transition-transform"
+                alt="Soundar K"
+                className="w-full h-full object-cover rounded-full transition-transform duration-300 ease-out group-hover:scale-110"
               />
-
-
             </div>
 
-            <div>
-              <motion.h1
-                className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent"
-                variants={fadeIn}
-              >
+
+            {/* Profile Info */}
+            <div className="text-center md:text-left text-white">
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
                 Soundar K
-              </motion.h1>
-              <motion.h2
-                className="text-2xl text-gray-600 mt-2"
-                variants={fadeIn}
-              >
-                Frontend Developer
-              </motion.h2>
-            </div>
-          </motion.div>
-          <motion.p
-            className="text-xl text-gray-600 max-w-2xl"
-            variants={fadeIn}
-          >
-            Passionate about crafting beautiful, responsive, and user-friendly web interfaces with modern JavaScript frameworks and best practices.
-          </motion.p>
-        </motion.div>
-      </header>
+              </h1>
+              <h2 className="text-2xl mt-2">Web Developer</h2>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 py-16">
-        {/* Projects Section */}
-        <motion.section
-          className="mb-20"
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          <motion.h2
-            className="text-3xl font-semibold text-gray-900 mb-8"
-            variants={fadeIn}
-          >
-            Featured Projects
-          </motion.h2>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            variants={fadeIn}
-          >
-            <motion.div
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-              whileHover={{ scale: 1.02 }}
-              variants={fadeIn}
-            >
-              <h3 className="text-xl font-semibold mb-3">Communion</h3>
-              <p className="text-gray-600 mb-4">
-                A modern social platform built with React, featuring a responsive UI, real-time updates, and seamless user interactions.
-              </p>
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://communion-dev.netlify.app/"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project <ExternalLink className="ml-1 w-4 h-4" />
-                </a>
+              <div className="mt-4 space-y-1 text-sm md:text-base">
+                <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 9361513600</p>
+                <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> vksoundar2020@gmail.com</p>
+                <p className="flex items-center gap-2"><ExternalLink className="w-4 h-4" /> 1, Pandamangalam Rd, Kabilarmalai, Tamil Nadu 637204, Namakkal</p>
               </div>
 
-              <h3 className="text-xl font-semibold mb-3 mt-5">Events Calendar</h3>
-              <p className="text-gray-600 mb-4">
-                A modern social platform built with React, featuring a responsive UI, real-time updates, and seamless user interactions.
+              <p className="mt-6 max-w-lg text-gray-200">
+                React Frontend Developer with experience in building responsive web applications using React.js, Next.js, and Tailwind CSS. Skilled in REST API integration, JWT authentication, data visualization, and state management. Strong problem-solving skills focused on delivering seamless user experiences.
               </p>
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://reminder-calendar.netlify.app/"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project <ExternalLink className="ml-1 w-4 h-4" />
-                </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Profile Image Modal */}
+        <Modal show={showModal} onHide={handleClose} centered size="sm" contentClassName="rounded-xl">
+          <Modal.Body className="p-0">
+            <img src={profileImg} alt="Soundar K" className="w-full h-full object-cover" />
+          </Modal.Body>
+          <Modal.Footer>
+            {/* <Button variant="secondary" onClick={handleClose}>Close</Button> */}
+          </Modal.Footer>
+        </Modal>
+
+        {/* Main Content */}
+        <main className="max-w-6xl mx-auto px-4 py-16 space-y-20">
+
+          {/* Work Experience */}
+          <section>
+            <h2 className="text-3xl font-semibold text-white mb-8">Work Experience</h2>
+            <div className="space-y-6">
+              <div className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:scale-102 text-gray-200">
+                <h3 className="text-xl font-semibold">Web Developer</h3>
+                <p className="text-gray-300">September 2025 - Till Date, Coimbatore, Tamil Nadu</p>
+                <p className="mt-2">Worked on live projects, building responsive web applications with React, Next.js, Tailwind CSS, and integrating APIs.</p>
               </div>
-            </motion.div>
-          </motion.div>
-        </motion.section>
+            </div>
+          </section>
 
-        {/* Skills Section */}
-        <motion.section
-          className="mb-20"
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          <motion.h2
-            className="text-3xl font-semibold text-gray-900 mb-8"
-            variants={fadeIn}
-          >
-            Technical Skills
-          </motion.h2>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-            variants={fadeIn}
-          >
-            {[
-              {
-                title: "Core Technologies",
-                skills: ["React.js", "TypeScript", "JavaScript (ES6+)", "HTML5 & CSS3"]
-              },
-              {
-                title: "UI & Styling",
-                skills: ["Tailwind CSS", "Styled Components", "CSS Modules", "Responsive Design"]
-              },
-              {
-                title: "Tools & Libraries",
-                skills: ["Vite", "Redux Toolkit", "React Query", "Jest & React Testing Library"]
-              }
-            ].map((category, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-                variants={fadeIn}
-              >
-                <h3 className="font-semibold mb-4">{category.title}</h3>
-                <ul className="space-y-2 text-gray-600">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex}>{skill}</li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.section>
-
-        {/* Experience Section */}
-        <motion.section
-          className="mb-20"
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          <motion.h2
-            className="text-3xl font-semibold text-gray-900 mb-8"
-            variants={fadeIn}
-          >
-            Frontend Experience
-          </motion.h2>
-          <motion.div
-            className="bg-white p-6 rounded-xl shadow-sm"
-            variants={fadeIn}
-          >
-            <ul className="space-y-6">
+          {/* Education */}
+          <section>
+            <h2 className="text-3xl font-semibold text-white mb-8">Education</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                {
-                  title: "Single Page Applications",
-                  description: "Extensive experience in building complex SPAs with React, focusing on performance optimization and clean architecture."
-                },
-                {
-                  title: "Component Libraries",
-                  description: "Developed reusable component libraries with TypeScript, ensuring consistency across large-scale applications."
-                },
-                {
-                  title: "UI/UX Implementation",
-                  description: "Skilled in translating design mockups into pixel-perfect, responsive interfaces with modern CSS techniques."
-                }
-              ].map((exp, index) => (
-                <motion.li
-                  key={index}
-                  className="hover:bg-gray-50 p-4 rounded-lg transition-colors"
-                  whileHover={{ x: 10 }}
-                >
-                  <h3 className="text-lg font-semibold">{exp.title}</h3>
-                  <p className="text-gray-600">{exp.description}</p>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </motion.section>
-
-        {/* Education Section */}
-        <motion.section
-          className="mb-20"
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          <motion.h2
-            className="text-3xl font-semibold text-gray-900 mb-8"
-            variants={fadeIn}
-          >
-            🎓 Education
-          </motion.h2>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            variants={fadeIn}
-          >
-            <div className="opacity-100">
-              {[
-                {
-                  degree: "Bachelor of Computer Application",
-                  institution: "KSR College of Arts and Science",
-                  location: "Tiruchengode, Tamil Nadu",
-                  duration: "2022 – 2025",
-                  score: "7.6 CGPA",
-                },
-                {
-                  degree: "Higher Secondary (HSC)",
-                  institution: "Govt Higher Secondary School",
-                  location: "Namakkal, Tamil Nadu",
-                  duration: "2021 – 2022",
-                  score: "75%",
-                },
-                {
-                  degree: "SSLC (10th)",
-                  institution: "Govt Higher Secondary School",
-                  location: "Namakkal, Tamil Nadu",
-                  duration: "2019 – 2020",
-                  score: "85%",
-                },
-              ].map((edu, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                  variants={fadeIn}
-                >
-                  <h3 className="text-xl font-semibold text-gray-800">{edu.degree}</h3>
-                  <p className="text-gray-600">{edu.institution}, {edu.location}</p>
-                  <p className="text-sm text-gray-500 mt-1">{edu.duration} • <span className="font-medium">{edu.score}</span></p>
-                </motion.div>
+                { degree: "BCA", institution: "K.S.R College of Arts and Science", location: "Thiruchengodu, Tamil Nadu", duration: "May 2022 - May 2025", score: "7.6 CGPA" },
+                { degree: "HSC", institution: "Govt Higher Secondary School", location: "Namakkal, Tamil Nadu", duration: "2021 - 2022", score: "75%" },
+                { degree: "SSLC", institution: "Govt Higher Secondary School", location: "Namakkal, Tamil Nadu", duration: "2019 - 2020", score: "85%" },
+              ].map((edu, i) => (
+                <div key={i} className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-102 text-gray-200">
+                  <h3 className="text-xl font-semibold">{edu.degree}</h3>
+                  <p className="text-gray-300">{edu.institution}, {edu.location}</p>
+                  <p className="text-sm text-gray-400 mt-1">{edu.duration} • <span className="font-medium">{edu.score}</span></p>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </motion.section>
+          </section>
 
+          {/* Skills */}
+          <section>
+            <h2 className="text-3xl font-semibold text-white mb-8">Skills</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { title: "Frontend", skills: ["React.js", "Next.js", "Tailwind CSS", "React Bootstrap"] },
+                { title: "Backend & API", skills: ["REST API Integration", "JWT Authentication", "Node.js"] },
+                { title: "Tools & Practices", skills: ["Chart.js / Recharts", "Git", "Responsive Design", "Problem-solving"] },
+              ].map((cat, i) => (
+                <div key={i} className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-102 text-gray-200">
+                  <h3 className="font-semibold mb-4">{cat.title}</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    {cat.skills.map((skill, idx) => (<li key={idx}>{skill}</li>))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        {/* Links Section */}
-        <motion.section
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          <motion.h2
-            className="text-3xl font-semibold text-gray-900 mb-8"
-            variants={fadeIn}
-          >
-            Connect Me
-          </motion.h2>
-          <motion.div
-            className="flex flex-wrap gap-6"
-            variants={fadeIn}
-          >
-            {[
-              {
-                href: "https://github.com/Soundar-techie",
-                icon: Github,
-                text: "GitHub",
-                className: "bg-gray-900 hover:bg-gray-800"
-              },
-              {
-                href: "https://leetcode.com/problem-list/2i5evy12/",
-                icon: ArrowUpRight,
-                text: "LeetCode",
-                className: "bg-[#FFA116] hover:bg-[#FF9900]"
-              },
-              {
-                href: "https://www.linkedin.com/in/soundar-k-216b13270",
-                icon: Linkedin,
-                text: "LinkeIn",
-                className: "bg-blue-600 hover:bg-blue-700"
-              },
-              {
-                href: "+91 9361513600",
-                icon: Phone,
-                text: "+91 9361513600",
-                className: "bg-blue-600 hover:bg-blue-700",
-                external: false
-              }
+          {/* Hobbies */}
+          <section>
+            <h2 className="text-3xl font-semibold text-white mb-8">Hobbies</h2>
+            <div className="flex flex-wrap gap-4">
+              {["Cricket", "Building Personal Projects", "Learning"].map((hobby, i) => (
+                <div key={i} className="bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-102 text-gray-200 font-medium">{hobby}</div>
+              ))}
+            </div>
+          </section>
 
+          {/* Connect Section */}
+          <section>
+            <h2 className="text-3xl font-semibold text-white mb-8">Connect With Me</h2>
+            <div className="flex flex-wrap gap-4">
+              {[
+                { href: "https://github.com/Soundar-techie", icon: Github, text: "GitHub", className: "bg-gray-900 hover:bg-gray-800" },
+                { href: "https://leetcode.com/problem-list/2i5evy12/", icon: ArrowUpRight, text: "LeetCode", className: "bg-[#FFA116] hover:bg-[#FF9900]" },
+                { href: "https://www.linkedin.com/in/soundar-k-216b13270", icon: Linkedin, text: "LinkedIn", className: "bg-blue-600 hover:bg-blue-700" },
+                { href: "mailto:vksoundar2020@gmail.com", icon: Mail, text: "Email", className: "bg-green-600 hover:bg-green-700" },
+                { href: "tel:+919361513600", icon: Phone, text: "Phone", className: "bg-orange-600 hover:bg-orange-700" },
+              ].map((link, i) => (
+                <a key={i} href={link.href} className={`inline-flex items-center px-4 py-2 text-white rounded-lg transition-all duration-300 transform hover:-translate-y-1 ${link.className}`} target="_blank" rel="noopener noreferrer">
+                  <link.icon className="w-5 h-5 mr-2" /> {link.text}
+                </a>
+              ))}
+            </div>
+          </section>
 
-            ].map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                className={`inline-flex items-center px-4 py-2 text-white rounded-lg transition-all duration-300 transform hover:-translate-y-1 ${link.className}`}
-                {...(link.external !== false && {
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                })}
-                whileHover={{ scale: 1.05 }}
-                variants={fadeIn}
-              >
-                <link.icon className="w-5 h-5 mr-2" />
-                {link.text}
-              </motion.a>
+        </main>
 
-            ))}
-          </motion.div>
-        </motion.section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-white mt-20 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <p className="text-center text-gray-600">
+        {/* Footer */}
+        <footer className="mt-20 shadow-sm">
+          <div className="max-w-6xl mx-auto px-4 py-8 text-center text-gray-400">
             © {new Date().getFullYear()} • Built with React & Tailwind CSS
-          </p>
-        </div>
-      </footer>
+          </div>
+        </footer>
+
+      </div>
     </div>
   );
+
 }
 
 export default App;
