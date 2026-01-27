@@ -60,10 +60,10 @@ const About = () => {
           {/* Introduction */}
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              I'm a passionate Frontend Developer based in Coimbatore, Tamil Nadu, with a strong focus on 
-              creating clean, efficient, and user-friendly web applications. My journey in web development 
-              started with a curiosity about how websites work, which quickly evolved into a deep passion 
-              for building digital experiences.
+              MERN Stack Web Developer and BCA graduate with hands-on experience in React.js, Node.js, Express.js, and MongoDB. 
+              Worked on real-world projects like URCAB and FMS, contributing to frontend development, API integration, and basic backend functionality.
+              Passionate about building scalable web applications, writing clean code, and collaborating in fast-paced team environments.
+
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               With expertise in React.js, Next.js, and modern frontend technologies, I specialize in 

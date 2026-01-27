@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-gradient">
-            SK
+            VKS
           </Link>
 
           {/* Desktop Navigation */}

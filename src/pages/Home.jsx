@@ -16,14 +16,14 @@ const Home = () => {
                 Hi, I'm <span className="text-gradient">Soundar K</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-gray-300">
-                Frontend Developer | React & Next.js
+                Web Developer | React & Next.js
               </h2>
             </div>
 
             <p className="text-lg text-gray-400 max-w-2xl leading-relaxed">
-              Passionate frontend developer specializing in building exceptional digital experiences. 
-              I create responsive, user-friendly web applications using modern technologies like React, 
-              Next.js, and Tailwind CSS. Based in Coimbatore, Tamil Nadu, I'm dedicated to crafting 
+              Passionate frontend developer specializing in building exceptional digital experiences.
+              I create responsive, user-friendly web applications using modern technologies like React,
+              Next.js, and Tailwind CSS. Based in Coimbatore, Tamil Nadu, I'm dedicated to crafting
               clean, efficient code and bringing ideas to life.
             </p>
 
@@ -47,7 +47,7 @@ const Home = () => {
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
               <a
-                href="https://github.com/soundark"
+                href="https://github.com/Soundar-techie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 hover:bg-primary-600 rounded-lg transition-all duration-300 hover:scale-110"
@@ -56,7 +56,7 @@ const Home = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/soundark"
+                href="https://www.linkedin.com/in/soundar-k-216b13270/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 hover:bg-primary-600 rounded-lg transition-all duration-300 hover:scale-110"
@@ -65,7 +65,7 @@ const Home = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:soundar@example.com"
+                href="mailto:vksoundar2020@example.com"
                 className="p-3 bg-gray-800 hover:bg-primary-600 rounded-lg transition-all duration-300 hover:scale-110"
                 aria-label="Email"
               >
