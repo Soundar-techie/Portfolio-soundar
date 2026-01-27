@@ -45,7 +45,7 @@ function App() {
               <div className="mt-4 space-y-1 text-sm md:text-base">
                 <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 9361513600</p>
                 <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> vksoundar2020@gmail.com</p>
-                <p className="flex items-center gap-2"><ExternalLink className="w-4 h-4" /> 1, Pandamangalam Rd, Kabilarmalai, Tamil Nadu 637204, Namakkal</p>
+                <p className="flex items-center gap-2"><ExternalLink className="w-4 h-4" /> Namakkal, Tamil Nadu 637204</p>
               </div>
 
               <p className="mt-6 max-w-lg text-gray-200">
