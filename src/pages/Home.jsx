@@ -15,6 +15,9 @@ const Home = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
                 Hi, I'm <span className="text-gradient">Soundar K</span>
               </h1>
+              {/* <h2 className="text-2xl md:text-3xl text-gray-300">
+                Web Developer | React & Next.js
+              </h2> */}
               <h2 className="text-2xl md:text-3xl text-gray-300">
                 Web Developer | React & Next.js
               </h2>
