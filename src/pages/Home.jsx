@@ -19,8 +19,9 @@ const Home = () => {
                 Web Developer | React & Next.js
               </h2> */}
               <h2 className="text-2xl md:text-3xl text-gray-300">
-                Web Developer | React & Next.js
+                Frontend-Focused MERN Stack Developer | React & Next.js
               </h2>
+
             </div>
 
             <p className="text-lg text-gray-400 max-w-2xl leading-relaxed">
