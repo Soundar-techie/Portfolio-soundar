@@ -1,3 +1,4 @@
+import emailjs from "emailjs-com";
 import { useState } from 'react';
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, CheckCircle2 } from 'lucide-react';
 
@@ -50,20 +51,52 @@ const Contact = () => {
         }
     };
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const newErrors = validateForm();
+
+    //     if (Object.keys(newErrors).length === 0) {
+    //         // Form is valid
+    //         console.log('Form submitted:', formData);
+    //         setSubmitted(true);
+    //         setFormData({ name: '', email: '', message: '' });
+
+    //         // Reset submitted message after 5 seconds
+    //         setTimeout(() => {
+    //             setSubmitted(false);
+    //         }, 5000);
+    //     } else {
+    //         setErrors(newErrors);
+    //     }
+    // };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const newErrors = validateForm();
 
         if (Object.keys(newErrors).length === 0) {
-            // Form is valid
-            console.log('Form submitted:', formData);
-            setSubmitted(true);
-            setFormData({ name: '', email: '', message: '' });
+            emailjs
+                .send(
+                    "service_wxhn6hc",     // 🔴 from EmailJS
+                    "template_gspamvj",    // 🔴 from EmailJS
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message,
+                    },
+                    "V9D1wkbvDpgS5UG2W"      // 🔴 from EmailJS
+                )
+                .then(() => {
+                    setSubmitted(true);
+                    setFormData({ name: "", email: "", message: "" });
 
-            // Reset submitted message after 5 seconds
-            setTimeout(() => {
-                setSubmitted(false);
-            }, 5000);
+                    setTimeout(() => {
+                        setSubmitted(false);
+                    }, 5000);
+                })
+                .catch((error) => {
+                    console.error("EmailJS Error:", error);
+                });
         } else {
             setErrors(newErrors);
         }

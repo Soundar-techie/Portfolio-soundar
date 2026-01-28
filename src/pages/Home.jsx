@@ -89,7 +89,7 @@ const Home = () => {
       </section>
 
       {/* Quick Stats */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { label: 'Years Experience', value: '2+' },
@@ -108,7 +108,29 @@ const Home = () => {
             </div>
           ))}
         </div>
+      </section> */}
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { label: 'Internship Experience', value: '3+ Months' },
+            { label: 'Projects Built', value: '8+' },
+            { label: 'Technologies Learned', value: '12+' },
+            { label: 'Currently Learning', value: 'Full Stack' },
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-gray-700 hover:border-primary-600 transition-all duration-300 hover:scale-105"
+            >
+              <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
+                {stat.value}
+              </div>
+              <div className="text-gray-400 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </section>
+
     </div>
   );
 };
