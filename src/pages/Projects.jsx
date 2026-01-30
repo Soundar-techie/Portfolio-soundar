@@ -4,25 +4,25 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            name: 'URCAB Application',
+            name: 'CAB Application',
             description:
                 'A comprehensive cab booking application built with React and modern web technologies. Features include real-time booking, user authentication, ride tracking, and payment integration. Designed with a focus on user experience and responsive design.',
             techStack: ['React.js', 'Tailwind CSS', 'REST API', 'JWT Auth', 'React Router'],
             github: 'https://github.com/soundark/urcab-app',
             live: 'https://urcab-demo.netlify.app',
             category: 'Full Stack',
-            img:'',
+            img: '',
         },
-        {
-            id: 2,
-            name: 'FMS Project',
-            description:
-                'Fleet Management System designed to streamline vehicle tracking, maintenance scheduling, and driver management. Built with React for a smooth user interface and integrated with backend APIs for real-time data synchronization.',
-            techStack: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'API Integration'],
-            github: 'https://github.com/soundark/fms-project',
-            live: 'https://fms-demo.vercel.app',
-            category: 'Enterprise',
-        },
+        // {
+        //     id: 2,
+        //     name: 'FMS Project',
+        //     description:
+        //         'Fleet Management System designed to streamline vehicle tracking, maintenance scheduling, and driver management. Built with React for a smooth user interface and integrated with backend APIs for real-time data synchronization.',
+        //     techStack: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'API Integration'],
+        //     github: 'https://github.com/soundark/fms-project',
+        //     live: 'https://fms-demo.vercel.app',
+        //     category: 'Enterprise',
+        // },
         {
             id: 3,
             name: 'Personal Portfolio',
@@ -55,13 +55,13 @@ const Projects = () => {
         },
         {
             id: 6,
-            name: 'Task Management System',
+            name: 'Communion Management Website',
             description:
-                'A productivity tool for managing tasks and projects with features like drag-and-drop, priority levels, due dates, and progress tracking. Built with React hooks and local storage for data persistence.',
-            techStack: ['React.js', 'React DnD', 'LocalStorage', 'Tailwind CSS', 'React Hooks'],
-            github: 'https://github.com/soundark/task-manager',
-            live: 'https://task-manager-soundar.netlify.app',
-            category: 'Productivity',
+                'A modern and responsive communion website built using React to showcase events, announcements, and community updates with a clean and user-friendly interface.',
+            techStack: ['React.js', 'TypeScript', 'Tailwind CSS', 'React Hooks', 'Responsive Design'],
+            github: 'https://github.com/Soundar-techie/Communion.git',
+            live: 'https://communion-eboe.onrender.com',
+            category: 'Community Platform',
         },
     ];
 
