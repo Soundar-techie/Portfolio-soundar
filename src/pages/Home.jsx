@@ -110,7 +110,13 @@ const Home = () => {
               <div className="absolute inset-0 bg-primary-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-600/30 shadow-2xl">
                 <div className="w-full h-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
-                  <span className="text-8xl font-bold text-white">VKS</span>
+                  {/* <span className="text-8xl font-bold text-white">VKS</span> */}
+                  <img
+                    src="\src\assets\image.png"
+                    alt="VKS"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: "70% 30%" }}
+                  />
                 </div>
               </div>
             </div>
