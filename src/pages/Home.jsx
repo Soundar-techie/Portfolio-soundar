@@ -68,8 +68,8 @@ const Home = () => {
               </button>
 
 
-              <button onClick={handleView}>View Resume</button>
-              <button onClick={handleDownload}>Download Resume</button>
+              {/* <button onClick={handleView}>View Resume</button>
+              <button onClick={handleDownload}>Download Resume</button> */}
 
 
             </div>
@@ -115,7 +115,7 @@ const Home = () => {
                     src="\src\assets\image.png"
                     alt="VKS"
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: "70% 30%" }}
+                    style={{ objectPosition: "50% 30%" }}
                   />
                 </div>
               </div>
