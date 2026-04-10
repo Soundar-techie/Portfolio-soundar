@@ -39,8 +39,8 @@ const Projects = () => {
             description:
                 'Admin dashboard for managing an e-commerce platform. Features include product management, order tracking, analytics visualization, and inventory control. Built with modern React patterns and state management.',
             techStack: ['React.js', 'Redux', 'Chart.js', 'Tailwind CSS', 'REST API'],
-            github: 'https://github.com/soundark/ecommerce-dashboard',
-            live: 'https://ecommerce-admin-demo.netlify.app',
+            github: 'https://github.com/Soundar-techie/E-Commers-Dashboard.git',
+            live: 'https://e-commers-dashboard.onrender.com',
             category: 'Dashboard',
         },
         {
@@ -60,7 +60,7 @@ const Projects = () => {
                 'A modern and responsive communion website built using React to showcase events, announcements, and community updates with a clean and user-friendly interface.',
             techStack: ['React.js', 'TypeScript', 'Tailwind CSS', 'React Hooks', 'Responsive Design'],
             github: 'https://github.com/Soundar-techie/Communion.git',
-            live: 'https://communion-eboe.onrender.com',
+            live: 'https://e-commers-dashboard.onrender.com',
             category: 'Community Platform',
         },
     ];
