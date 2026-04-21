@@ -2,39 +2,8 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
     const projects = [
-        {
+          {
             id: 1,
-            name: 'CAB Application',
-            description:
-                'A comprehensive cab booking application built with React and modern web technologies. Features include real-time booking, user authentication, ride tracking, and payment integration. Designed with a focus on user experience and responsive design.',
-            techStack: ['React.js', 'Tailwind CSS', 'REST API', 'JWT Auth', 'React Router'],
-            github: 'https://github.com/soundark/urcab-app',
-            live: 'https://urcab-demo.netlify.app',
-            category: 'Full Stack',
-            img: '',
-        },
-        // {
-        //     id: 2,
-        //     name: 'FMS Project',
-        //     description:
-        //         'Fleet Management System designed to streamline vehicle tracking, maintenance scheduling, and driver management. Built with React for a smooth user interface and integrated with backend APIs for real-time data synchronization.',
-        //     techStack: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'API Integration'],
-        //     github: 'https://github.com/soundark/fms-project',
-        //     live: 'https://fms-demo.vercel.app',
-        //     category: 'Enterprise',
-        // },
-        {
-            id: 3,
-            name: 'Personal Portfolio',
-            description:
-                'A modern, responsive portfolio website showcasing my work and skills. Built with React, featuring smooth animations, dark theme, and optimized performance. Includes project gallery, about section, and contact form.',
-            techStack: ['React.js', 'Vite', 'Tailwind CSS', 'React Router', 'Lucide Icons'],
-            github: 'https://github.com/soundark/portfolio',
-            live: 'https://soundark.dev',
-            category: 'Personal',
-        },
-        {
-            id: 4,
             name: 'E-Commerce Dashboard',
             description:
                 'Admin dashboard for managing an e-commerce platform. Features include product management, order tracking, analytics visualization, and inventory control. Built with modern React patterns and state management.',
@@ -44,17 +13,17 @@ const Projects = () => {
             category: 'Dashboard',
         },
         {
-            id: 5,
+            id: 2,
             name: 'Weather Application',
             description:
                 'Real-time weather application that provides current weather conditions, 5-day forecasts, and location-based weather updates. Integrated with OpenWeather API and features a clean, intuitive interface.',
             techStack: ['React.js', 'Weather API', 'Geolocation', 'CSS3', 'Responsive Design'],
-            github: 'https://github.com/soundark/weather-app',
-            live: 'https://weather-soundar.netlify.app',
+            github: 'https://github.com/Soundar-techie/Weather-App.git',
+            live: 'https://weather-app-usxo.onrender.com',
             category: 'Web App',
         },
         {
-            id: 6,
+            id: 3,
             name: 'Communion Management Website',
             description:
                 'A modern and responsive communion website built using React to showcase events, announcements, and community updates with a clean and user-friendly interface.',
@@ -63,6 +32,28 @@ const Projects = () => {
             live: 'https://e-commers-dashboard.onrender.com',
             category: 'Community Platform',
         },
+        {
+            id: 4,
+            name: 'CAB Application',
+            description:
+                'A comprehensive cab booking application built with React and modern web technologies. Features include real-time booking, user authentication, ride tracking, and payment integration. Designed with a focus on user experience and responsive design.',
+            techStack: ['React.js', 'Tailwind CSS', 'REST API', 'JWT Auth', 'React Router'],
+            github: 'https://github.com/soundark/urcab-app',
+            live: 'https://urcab-demo.netlify.app',
+            category: 'Full Stack',
+            img: '',
+        },
+        {
+            id: 5,
+            name: 'Personal Portfolio',
+            description:
+                'A modern, responsive portfolio website showcasing my work and skills. Built with React, featuring smooth animations, dark theme, and optimized performance. Includes project gallery, about section, and contact form.',
+            techStack: ['React.js', 'Vite', 'Tailwind CSS', 'React Router', 'Lucide Icons'],
+            github: 'https://github.com/soundark/portfolio',
+            live: 'https://soundark.dev',
+            category: 'Personal',
+        },
+      
     ];
 
     return (
