@@ -29,7 +29,7 @@ const Projects = () => {
                 'A modern and responsive communion website built using React to showcase events, announcements, and community updates with a clean and user-friendly interface.',
             techStack: ['React.js', 'TypeScript', 'Tailwind CSS', 'React Hooks', 'Responsive Design'],
             github: 'https://github.com/Soundar-techie/Communion.git',
-            live: 'https://e-commers-dashboard.onrender.com',
+            live: 'https://communion-eboe.onrender.com',
             category: 'Community Platform',
         },
         {
