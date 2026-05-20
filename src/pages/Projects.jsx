@@ -2,7 +2,7 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
     const projects = [
-          {
+        {
             id: 1,
             name: 'E-Commerce Dashboard',
             description:
@@ -34,12 +34,22 @@ const Projects = () => {
         },
         {
             id: 4,
-            name: 'CAB Application',
+            name: 'File Upload Stack',
             description:
-                'A comprehensive cab booking application built with React and modern web technologies. Features include real-time booking, user authentication, ride tracking, and payment integration. Designed with a focus on user experience and responsive design.',
-            techStack: ['React.js', 'Tailwind CSS', 'REST API', 'JWT Auth', 'React Router'],
-            github: 'https://github.com/soundark/urcab-app',
-            live: 'https://urcab-demo.netlify.app',
+                'A full-stack file upload application built using the MERN stack with secure cloud storage integration. Features include image and document upload, drag-and-drop functionality, file preview, authentication, and responsive dashboard management. Implemented secure backend APIs with Multer and Cloudinary for scalable media handling and optimized performance.',
+            techStack: [
+                'React.js',
+                'Node.js',
+                'Express.js',
+                'MongoDB',
+                'Multer',
+                'Cloudinary',
+                'Tailwind CSS',
+                'JWT Auth',
+                'REST API'
+            ],
+            github: 'https://github.com/Soundar-techie/File-Upload-Stack.git',
+            live: 'https://file-upload-stack-1.onrender.com/',
             category: 'Full Stack',
             img: '',
         },
@@ -53,7 +63,7 @@ const Projects = () => {
             live: 'https://soundark.dev',
             category: 'Personal',
         },
-      
+
     ];
 
     return (
